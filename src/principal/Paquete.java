@@ -47,6 +47,14 @@ public class Paquete {
     public String toString() {
         return "Paquete{" + "codigo=" + codigo + ", peso=" + peso + ", destino=" + destino + '}';
     }
+
+    public String getCodigo() {
+        return codigo;
+    }
+
+    public String getDestino() {
+        return destino;
+    }
     
     
     
