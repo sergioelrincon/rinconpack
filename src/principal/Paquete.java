@@ -55,6 +55,10 @@ public class Paquete {
     public String getDestino() {
         return destino;
     }
+
+    public double getPeso() {
+        return peso;
+    }
     
     
     

@@ -7,6 +7,8 @@ package principal;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Map;
 
 /**
  *
@@ -54,4 +56,26 @@ public class Almacen {
         
         
     }
+    
+    public void mantenimientoSeguridad(double pesoMaximo) {
+        Iterator<Paquete> it = colaSalida.iterator();
+        
+        while (it.hasNext()) {
+            Paquete elemento = it.next();
+            
+            if (elemento.getPeso() > pesoMaximo) {
+                System.out.println("Eliminando el paquete " + elemento.getCodigo() + " por exceso de peso");
+                it.remove();       
+            }
+        }
+    }
+    
+    public void mostrarInformeFinal() {
+        System.out.println("---- INFORME FINAL ----");
+        
+        for (Map.Entry<String, Integer> entrada : estadisticas.entrySet()) {
+            System.out.println("Destino: " + entrada.getKey() + " | Envíos: " + entrada.getValue());
+        }
+    }
+
 }

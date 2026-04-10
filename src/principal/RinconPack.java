@@ -14,6 +14,7 @@ public class RinconPack {
         Paquete paquete1 = new Paquete("COD-01", 3, "Madrid");
         Paquete paquete2 = new Paquete("COD-02", 36, "Barcelona");
         Paquete paquete3 = new Paquete("COD-03", 37, "Madrid");
+        Paquete paquete4 = new Paquete("COD-03", 37, "Madrid");
         
         almacen.recepcionarPaquete(paquete1, 0, 2);
         almacen.recepcionarPaquete(paquete2, 1, 2);
@@ -23,6 +24,9 @@ public class RinconPack {
         almacen.enviarACamion(1, 2);
         almacen.enviarACamion(2, 2);
         
+        almacen.mantenimientoSeguridad(36);
+        
+        almacen.mostrarInformeFinal();
         
     }
 }
